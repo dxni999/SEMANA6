@@ -10,11 +10,11 @@ int main() {
     char nombreBuscado[20];
 
     do {
-        printf("\nSelecciona una opción:\n");
+        printf("\nSelecciona una opcion:\n");
         printf("1. Ingresar un producto\n");
         printf("2. Calcular el precio total del inventario\n");
-        printf("3. Producto más caro\n");
-        printf("4. Producto más barato\n");
+        printf("3. Producto mas caro\n");
+        printf("4. Producto mas barato\n");
         printf("5. Precio promedio\n");
         printf("6. Buscar un producto\n");
         printf("7. Salir\n");
@@ -46,11 +46,11 @@ int main() {
                 printf("¡Hasta luego!\n");
                 break;
             default:
-                printf("Opción no válida.\n");
+                printf("Opcion no válida.\n");
         }
 
         if (opc != 7) {
-            printf("¿Desea continuar? (1. Sí / 2. No): ");
+            printf("¿Desea continuar? (1. Si / 2. No): ");
             scanf("%d", &opc);
         }
 

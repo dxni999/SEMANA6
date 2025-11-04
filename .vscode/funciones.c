@@ -2,7 +2,7 @@
 #include <string.h>
 #include "funciones.h"
 
-// Función para ingresar un producto
+// Funcion para ingresar un producto
 void ingresarProducto(char id[10][10], char nombre[10][20], float precio[10], int stock[10], int *cont) {
     if (*cont < 10) {
         printf("Ingrese el ID del producto %d: ", *cont);
@@ -22,11 +22,11 @@ void ingresarProducto(char id[10][10], char nombre[10][20], float precio[10], in
         
         (*cont)++;
     } else {
-        printf("Se ha alcanzado el límite de productos (10)\n");
+        printf("Se ha alcanzado el limite de productos (10)\n");
     }
 }
 
-// Función para calcular el precio total del inventario
+// Funcion para calcular el precio total del inventario
 float calcularTotalInventario(float precio[10], int stock[10], int cont) {
     float total = 0;
     for (int i = 0; i < cont; i++) {
@@ -35,7 +35,7 @@ float calcularTotalInventario(float precio[10], int stock[10], int cont) {
     return total;
 }
 
-// Función para encontrar el producto más caro
+// Funcion para encontrar el producto más caro
 void productoMasCaro(float precio[10], char nombre[10][20], int cont) {
     float max = precio[0];
     int index = 0;
@@ -45,10 +45,10 @@ void productoMasCaro(float precio[10], char nombre[10][20], int cont) {
             index = i;
         }
     }
-    printf("El producto más caro es: %s con un precio de %.2f\n", nombre[index], max);
+    printf("El producto mas caro es: %s con un precio de %.2f\n", nombre[index], max);
 }
 
-// Función para encontrar el producto más barato
+// Funcion para encontrar el producto más barato
 void productoMasBarato(float precio[10], char nombre[10][20], int cont) {
     float min = precio[0];
     int index = 0;
@@ -58,10 +58,10 @@ void productoMasBarato(float precio[10], char nombre[10][20], int cont) {
             index = i;
         }
     }
-    printf("El producto más barato es: %s con un precio de %.2f\n", nombre[index], min);
+    printf("El producto mas barato es: %s con un precio de %.2f\n", nombre[index], min);
 }
 
-// Función para calcular el precio promedio
+// Funcion para calcular el precio promedio
 float calcularPrecioPromedio(float precio[10], int cont) {
     float total = 0;
     for (int i = 0; i < cont; i++) {
@@ -70,7 +70,7 @@ float calcularPrecioPromedio(float precio[10], int cont) {
     return total / cont;
 }
 
-// Función para buscar un producto por su nombre
+// Funcion para buscar un producto por su nombre
 void buscarProducto(char nombre[10][20], float precio[10], int cont, char nombreBuscado[20]) {
     for (int i = 0; i < cont; i++) {
         if (strcmp(nombre[i], nombreBuscado) == 0) {
